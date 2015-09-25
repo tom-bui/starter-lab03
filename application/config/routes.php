@@ -39,11 +39,12 @@
 */
 
 $route['default_controller'] = "welcome";
-$route['sleep'] = "first/zzz";
-$route['lock/(.*)'] = "welcome/shucks";
-$route['show/(\d*)'] = "first/gimme/$1";
-$route['dunno'] = "guess";
-$route['[a-zA-Z]{4}/bingo'] = "bingo";
+$route['sleep'] = "first/zzz"; // remaps "sleep" to the zzz method in the First controller
+$route['lock/(.*)'] = "welcome/shucks"; // remaps "lock/*" to the shucks method in the default Welcome controller
+$route['show/(\d*)'] = "first/gimme/$1"; // remaps "show/(digit)" to the gimme method (which takes a parameter) of the First controller
+$route['dunno'] = "guess"; // remaps "dunno" to the index method of the Guess controller
+$route['[a-zA-Z]{4}/bingo'] = "bingo"; // remaps urls with structure "(4 letters)/bingo" to the index method of the Bingo controller
+$route['comp(\d*)/(.*)'] = "bingo/wisdom"; // remaps urls with the structure "comp(digits)/*" to the wisdom method of the Bingo controller
 $route['404_override'] = '';
 
 
