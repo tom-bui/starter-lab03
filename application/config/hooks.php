@@ -10,6 +10,12 @@
 |
 */
 
+$hook['display_override'] = array(
+        'class'    => 'Display',
+        'function' => 'massage',
+        'filename' => 'Display.php',
+        'filepath' => 'hooks'
+);
 
 
 /* End of file hooks.php */
